@@ -1,0 +1,91 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.col {
+  /* justify-self: start; */
+  /* align-self: start; */
+  background-color: lightgrey;
+}
+.grid {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* grid-template-rows: 300px 350px; */
+  grid-gap: 0.5rem;
+  row-gap: 0.5rem;
+  /* grid-auto-rows: 120px; */
+  /* align-items: center; */
+  /* justify-items: start; */
+  background-color: lightcoral;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+}
+@media only screen and (max-width: 768px) {
+  .grid {
+    background-color: lightblue;
+    /* grid-template-columns: 100%; */
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .grid {
+    background-color: lightgreen;
+    /* grid-template-columns: 100%; */
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+.card {
+  background-color: lightgoldenrodyellow;
+  border-width: 1px;
+  border-color: #2b2e2c;
+  border-style: solid;
+  /* padding: 10px; */
+  border-radius: 8px;
+  height: 250px;
+}
+@media only screen and (max-width: 768px) {
+  .card {
+    background-color: rgb(224, 224, 43);
+  }
+}
+.two-col-grid {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: 300px 300px 300px;
+  grid-gap: 0.5rem;
+  row-gap: 0.5rem;
+  justify-content: center;
+  background-color: lightcoral;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+/* @media only screen and (max-width: 1024px) {
+  .two-col-grid {
+    background-color: rgb(20, 114, 28);
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+} */
+/* @media only screen and (max-width: 768px) { */
+@media only screen and (max-width: 1024px) {
+  .two-col-grid {
+    background-color: lightblue;
+    grid-template-columns: 300px 300px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .two-col-grid {
+    background-color: lightgreen;
+    grid-template-columns: 300px;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
