@@ -77,6 +77,36 @@ export const GridBox = () => {
           <div className="col">
             <ProductCard />
           </div>
+          <div className="col">
+            <ProductCard />
+          </div>
+          <div className="col">
+            <ProductCard />
+          </div>
+          <div className="col">
+            <ProductCard />
+          </div>
+          <div className="col">
+            <ProductCard />
+          </div>
+          <div className="col">
+            <ProductCard />
+          </div>
+          <div className="col">
+            <ProductCard />
+          </div>
+          <div className="col">
+            <ProductCard />
+          </div>
+          <div className="col">
+            <ProductCard />
+          </div>
+          <div className="col">
+            <ProductCard />
+          </div>
+          <div className="col">
+            <ProductCard />
+          </div>
         </div>
       </>
     );

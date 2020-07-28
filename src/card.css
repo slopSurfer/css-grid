@@ -3,7 +3,7 @@
 .card-product {
   background-color: rgb(253, 253, 253);
   border-width: 0.5px;
-  border-color: rgba(226, 219, 219, 0.3);
+  border-color: rgba(226, 219, 219, 0.2);
   border-style: solid;
   /* padding: 10px; */
   padding-bottom: 1.5rem;
@@ -14,9 +14,7 @@
   /* background-color: rgb(135, 206, 250); */
   max-width: 100%;
   max-height: 100%;
-  /* height: 20rem; */
-  /* width: 25rem; */
-  border-radius: 4px;
+  border-radius: 6px;
 }
 .text-base {
   /* color: #222; */
@@ -41,14 +39,26 @@
   color: rgba(0, 0, 0, 0.9);
   font-size: 1.7rem;
   font-weight: 700;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   /* margin-bottom: 5px; */
 }
 .price-discount {
-  color: rgb(23, 190, 122);
-  font-size: 1.2rem;
+  color: rgb(19, 139, 91);
+  font-size: 1.4rem;
   font-stretch: expanded;
-  font-weight: 700;
+  font-weight: 300;
+  text-decoration: line-through;
+}
+.price-discount-percent {
+  color: rgb(19, 139, 91);
+  font-size: 1.4rem;
+  /* font-stretch: expanded; */
+  font-weight: 600;
+  /* text-decoration: line-through; */
+}
+.price-grid {
+  display: grid;
+  grid-template-columns: 40% 30% 30%;
+  align-items: center;
   margin-top: 10px;
-  /* margin-bottom: 5px; */
 }
