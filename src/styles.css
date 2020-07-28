@@ -2,6 +2,15 @@
   font-family: sans-serif;
   text-align: center;
 }
+html {
+  font-size: 62.5%;
+} /* =10px */
+body {
+  font-size: 1.4rem;
+} /* =14px */
+h1 {
+  font-size: 2.4rem;
+} /* =24px */
 .col {
   /* justify-self: start; */
   /* align-self: start; */
@@ -11,12 +20,11 @@
   display: grid;
   /* grid-template-columns: 1fr 1fr; */
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 300px)); */
   /* grid-template-rows: 300px 350px; */
   grid-gap: 0.5rem;
   row-gap: 0.5rem;
-  /* grid-auto-rows: 120px; */
-  /* align-items: center; */
-  /* justify-items: start; */
+  justify-content: center;
   background-color: lightcoral;
   margin-left: 7.5%;
   margin-right: 7.5%;
@@ -85,6 +93,35 @@
   .two-col-grid {
     background-color: lightgreen;
     grid-template-columns: 300px;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+
+/* Four col grid */
+
+/* screen size 769 - 1400 */
+.max-three-col-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(28rem, 30rem));
+  grid-gap: 0.5rem;
+  row-gap: 0.5rem;
+  justify-content: center;
+  background-color: lightcoral;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+@media only screen and (min-width: 1440px) {
+  .max-three-col-grid {
+    grid-template-columns: repeat(4, minmax(28rem, 30rem));
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .max-three-col-grid {
+    background-color: lightblue;
+    grid-template-columns: repeat(auto-fill, minmax(28rem, 30rem));
     margin-left: 2%;
     margin-right: 2%;
   }

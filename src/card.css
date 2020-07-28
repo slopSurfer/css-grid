@@ -1,0 +1,28 @@
+/*  28-7-20 */
+
+.grid {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  max-width: 1440px;
+  /* grid-template-rows: 300px 350px; */
+  grid-gap: 0.5rem;
+  row-gap: 0.5rem;
+  background-color: lightcoral;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+}
+@media only screen and (max-width: 768px) {
+  .grid {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 760px;
+    /* grid-template-rows: 300px 350px; */
+    grid-gap: 0.5rem;
+    row-gap: 0.5rem;
+    background-color: lightblue;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
