@@ -1,6 +1,7 @@
 import * as React from "react";
 import "./styles.css";
 import { ProductCard } from "./ProductCard";
+import { Banner } from "./Banner";
 
 export const GridBox = () => {
   const BuildCard = () => {
@@ -50,9 +51,7 @@ export const GridBox = () => {
   const MaxThreeColGrid = () => {
     return (
       <>
-        <h4>Four Column Grid</h4>
-
-        <div className="max-three-col-grid">
+        <div style={{ marginTop: "3rem" }} className="max-three-col-grid">
           <div className="col">
             <ProductCard />
           </div>
@@ -114,6 +113,7 @@ export const GridBox = () => {
 
   return (
     <>
+      <Banner />
       <MaxThreeColGrid />
       <br />
 

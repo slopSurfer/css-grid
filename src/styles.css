@@ -95,17 +95,17 @@ h1 {
 /* screen size 769 - 1400 */
 .max-three-col-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(26rem, 28rem));
+  grid-template-columns: repeat(auto-fill, minmax(28rem, 32rem));
   grid-gap: 1.5rem;
   row-gap: 1.5rem;
   justify-content: center;
   background-color: white;
-  margin-left: 4%;
-  margin-right: 4%;
+  /* margin-left: 1%; */
+  /* margin-right: 1%; */
 }
 @media only screen and (min-width: 1440px) {
   .max-three-col-grid {
-    grid-template-columns: repeat(4, minmax(26rem, 28rem));
+    grid-template-columns: repeat(4, minmax(28rem, 32rem));
     margin-left: 10%;
     margin-right: 10%;
   }
@@ -113,8 +113,6 @@ h1 {
 @media only screen and (max-width: 768px) {
   .max-three-col-grid {
     /* background-color: lightblue; */
-    grid-template-columns: repeat(auto-fill, minmax(26rem, 28rem));
-    margin-left: 2%;
-    margin-right: 2%;
+    grid-template-columns: repeat(auto-fill, minmax(28rem, 32rem));
   }
 }
