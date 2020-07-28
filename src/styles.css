@@ -71,14 +71,6 @@ h1 {
   margin-left: 5%;
   margin-right: 5%;
 }
-/* @media only screen and (max-width: 1024px) {
-  .two-col-grid {
-    background-color: rgb(20, 114, 28);
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-  }
-} */
 /* @media only screen and (max-width: 768px) { */
 @media only screen and (max-width: 1024px) {
   .two-col-grid {
@@ -103,25 +95,25 @@ h1 {
 /* screen size 769 - 1400 */
 .max-three-col-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(28rem, 30rem));
-  grid-gap: 0.5rem;
-  row-gap: 0.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(26rem, 28rem));
+  grid-gap: 1.5rem;
+  row-gap: 1.5rem;
   justify-content: center;
-  background-color: lightcoral;
+  background-color: white;
   margin-left: 4%;
   margin-right: 4%;
 }
 @media only screen and (min-width: 1440px) {
   .max-three-col-grid {
-    grid-template-columns: repeat(4, minmax(28rem, 30rem));
+    grid-template-columns: repeat(4, minmax(26rem, 28rem));
     margin-left: 10%;
     margin-right: 10%;
   }
 }
 @media only screen and (max-width: 768px) {
   .max-three-col-grid {
-    background-color: lightblue;
-    grid-template-columns: repeat(auto-fill, minmax(28rem, 30rem));
+    /* background-color: lightblue; */
+    grid-template-columns: repeat(auto-fill, minmax(26rem, 28rem));
     margin-left: 2%;
     margin-right: 2%;
   }

@@ -1,5 +1,6 @@
 import * as React from "react";
 import "./styles.css";
+import { ProductCard } from "./ProductCard";
 
 export const GridBox = () => {
   const BuildCard = () => {
@@ -49,32 +50,32 @@ export const GridBox = () => {
   const MaxThreeColGrid = () => {
     return (
       <>
-        <h4>Max Three Column Grid</h4>
-        <h5>minmax(300px, 1fr)</h5>
+        <h4>Four Column Grid</h4>
+
         <div className="max-three-col-grid">
           <div className="col">
-            <BuildCard />
+            <ProductCard />
           </div>
           <div className="col">
-            <BuildCard />
+            <ProductCard />
           </div>
           <div className="col">
-            <BuildCard />
+            <ProductCard />
           </div>
           <div className="col">
-            <BuildCard />
+            <ProductCard />
           </div>
           <div className="col">
-            <BuildCard />
+            <ProductCard />
           </div>
           <div className="col">
-            <BuildCard />
+            <ProductCard />
           </div>
           <div className="col">
-            <BuildCard />
+            <ProductCard />
           </div>
           <div className="col">
-            <BuildCard />
+            <ProductCard />
           </div>
         </div>
       </>
@@ -86,13 +87,13 @@ export const GridBox = () => {
       <MaxThreeColGrid />
       <br />
 
-      <TwoColGrid />
+      {/* <TwoColGrid /> */}
 
-      <br />
+      {/* <br />
       <h4>Grid</h4>
-      <h3>repeat(auto-fill, minmax(300px, 1fr)</h3>
-      <div className="grid">
-        <div className="col">
+      <h3>repeat(auto-fill, minmax(300px, 1fr)</h3> */}
+      {/* <div className="grid"> */}
+      {/*  <div className="col">
           <BuildCard />
         </div>
         <div className="col">
@@ -116,7 +117,7 @@ export const GridBox = () => {
         <div className="col">
           <BuildCard />
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

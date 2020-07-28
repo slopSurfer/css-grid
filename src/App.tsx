@@ -5,7 +5,7 @@ import { GridBox } from "./GridDemo";
 export default function App() {
   return (
     <div className="App">
-      <h1>Grid Demo Update</h1>
+      <h1>Grid Demo</h1>
       <GridBox />
     </div>
   );
