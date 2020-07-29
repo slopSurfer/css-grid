@@ -19,14 +19,14 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .title {
-  color: rgba(0, 0, 0, 0.81);
-  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 1.7rem;
   font-weight: 400;
   margin-top: 10px;
 }
 .sub-title {
-  color: rgba(0, 0, 0, 0.71);
-  font-size: 1.25rem;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.3rem;
   margin-top: 10px;
 }
 .product-price {
@@ -36,7 +36,7 @@
 }
 .price-discount {
   color: rgb(19, 139, 91);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-stretch: expanded;
   font-weight: 300;
   text-decoration: line-through;
@@ -44,7 +44,7 @@
 .price-discount-percent {
   color: white;
   background-color: rgb(19, 139, 91);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   /* font-stretch: extra-expanded; */
   font-weight: 300;
   padding-left: 12.5px;
@@ -60,6 +60,9 @@
 }
 @media only screen and (max-width: 765px) {
   .price-grid {
+    /* used 100% so when the screen
+    is too narrow it wraps with 100% width
+    cols */
     grid-template-columns: 100%;
   }
 }
