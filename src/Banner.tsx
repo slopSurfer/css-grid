@@ -5,7 +5,7 @@ export const Banner = () => {
   return (
     <>
       <div className="banner-container" />
-      <div className="sub-title-banner">Custom Pet Portraits</div>
+      <div className="sub-title-banner">Pet Portraits</div>
     </>
   );
 };

@@ -54,7 +54,19 @@
 }
 .price-grid {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 30rem));
+  /* grid-template-columns: 40% 60%; */
+  /* grid-auto-flow: row-dense; */
   align-items: center;
   margin-top: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .price-grid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(10rem, 10rem)); */
+    grid-template-columns: 40% 60%;
+    /* grid-auto-flow: row-dense; */
+    align-items: center;
+    margin-top: 10px;
+  }
 }

@@ -1,11 +1,11 @@
 .banner-container {
-  height: 40rem;
+  height: 20vh;
   width: 100%;
   background-color: rgba(0, 255, 255, 0.3);
 }
 .sub-title-banner {
   text-align: left;
-  font-size: 5rem;
+  font-size: 4rem;
   color: rgba(0, 0, 0, 0.8);
   margin-left: 7%;
   margin-top: 2rem;
