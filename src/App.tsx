@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Route, Switch, Link } from "react-router-dom";
 import { GridBox } from "./GridDemo";
-import { ProductDetail } from "./ProductDetail";
+import { ProductDetail } from "./product/ProductDetail";
 import "./styles.css";
 
 export default function App() {
@@ -15,7 +15,6 @@ export default function App() {
           <Route path="/productdetail" exact component={ProductDetail} />
           <Route path="/about" exact component={About} />
         </Switch>
-        {/* <GridBox /> */}
       </div>
     </main>
   );

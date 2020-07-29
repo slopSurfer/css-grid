@@ -1,9 +1,9 @@
 import * as React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./styles.css";
-import { ProductCard } from "./ProductCard";
+import { ProductCard } from "./product/ProductCard";
 import { Banner } from "./Banner";
-import { ProductDetail } from "./ProductDetail";
+import { ProductDetail } from "./product/ProductDetail";
 
 export const GridBox = () => {
   const MaxThreeColGrid = () => {
