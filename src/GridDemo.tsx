@@ -1,53 +1,11 @@
 import * as React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./styles.css";
 import { ProductCard } from "./ProductCard";
 import { Banner } from "./Banner";
+import { ProductDetail } from "./ProductDetail";
 
 export const GridBox = () => {
-  const BuildCard = () => {
-    return (
-      <div className="card">
-        <div>Card</div>
-        <div>The Product</div>
-      </div>
-    );
-  };
-
-  const TwoColGrid = () => {
-    return (
-      <>
-        <h4>Two Column Grid</h4>
-        <h5>Max 3 Cols of 300px</h5>
-        <div className="two-col-grid">
-          <div className="col">
-            <BuildCard />
-          </div>
-          <div className="col">
-            <BuildCard />
-          </div>
-          <div className="col">
-            <BuildCard />
-          </div>
-          <div className="col">
-            <BuildCard />
-          </div>
-          <div className="col">
-            <BuildCard />
-          </div>
-          <div className="col">
-            <BuildCard />
-          </div>
-          <div className="col">
-            <BuildCard />
-          </div>
-          <div className="col">
-            <BuildCard />
-          </div>
-        </div>
-      </>
-    );
-  };
-
   const MaxThreeColGrid = () => {
     return (
       <>
@@ -113,41 +71,68 @@ export const GridBox = () => {
 
   return (
     <>
+      {/* <BasicRouter /> */}
+      {/* <Router> */}
       <Banner />
       <MaxThreeColGrid />
-      <br />
-
-      {/* <TwoColGrid /> */}
-
-      {/* <br />
-      <h4>Grid</h4>
-      <h3>repeat(auto-fill, minmax(300px, 1fr)</h3> */}
-      {/* <div className="grid"> */}
-      {/*  <div className="col">
-          <BuildCard />
-        </div>
-        <div className="col">
-          <BuildCard />
-        </div>
-        <div className="col">
-          <BuildCard />
-        </div>
-        <div className="col">
-          <BuildCard />
-        </div>
-        <div className="col">
-          <BuildCard />
-        </div>
-        <div className="col">
-          <BuildCard />
-        </div>
-        <div className="col">
-          <BuildCard />
-        </div>
-        <div className="col">
-          <BuildCard />
-        </div>
-      </div> */}
+      {/* </Router> */}
     </>
   );
 };
+
+export default function BasicRouter() {
+  return (
+    <Router>
+      <div>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/productdetail">Product Detail</Link>
+          </li>
+        </ul>
+
+        <hr />
+
+        {/*
+          A <Switch> looks through all its children <Route>
+          elements and renders the first one whose path
+          matches the current URL. Use a <Switch> any time
+          you have multiple routes, but you want only one
+          of them to render at a time
+        */}
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/productdetail">
+            <ProductDetail />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
+}
+
+function Home() {
+  return (
+    <div>
+      <h2>Home Page</h2>
+    </div>
+  );
+}
+
+function About() {
+  return (
+    <div>
+      <h2>About Page</h2>
+    </div>
+  );
+}

@@ -1,11 +1,21 @@
 import * as React from "react";
-// import "./styles.css";
+import { useHistory } from "react-router-dom";
 import "./card.css";
 
 export const ProductCard = () => {
+  const history = useHistory();
+  function handleClick() {
+    console.log("clicked");
+    history.push("/productdetail");
+    console.log("push");
+  }
   return (
     <>
-      <div className="card-product">
+      <div
+        className="card-product"
+        style={{ cursor: "pointer" }}
+        onClick={e => handleClick()}
+      >
         <img
           className="product-image"
           alt="pic"
@@ -14,17 +24,9 @@ export const ProductCard = () => {
         {/* <div className="product-image" /> */}
         <div className="title text-base">Pet Portrait, Custom canvas</div>
         <div className="sub-title text-base">Pet Pawtraits studio</div>
-        {/* <div className="price-grid"> */}
         <div className="price-grid">
-          <div
-            // style={{ backgroundColor: "yellow" }}
-            className="product-price text-base"
-          >
-            US $1.78
-          </div>
-          <div
-          // style={{ backgroundColor: "red" }}
-          >
+          <div className="product-price text-base">US $1.78</div>
+          <div>
             <span className="price-discount text-base">US$2.99</span>
             <span className="price-discount-percent text-base">30% Off</span>
           </div>
