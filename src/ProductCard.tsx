@@ -14,13 +14,20 @@ export const ProductCard = () => {
         {/* <div className="product-image" /> */}
         <div className="title text-base">Pet Portrait, Custom canvas</div>
         <div className="sub-title text-base">Pet Pawtraits studio</div>
+        {/* <div className="price-grid"> */}
         <div className="price-grid">
-          <div className="product-price text-base">US $1.78</div>
-          <div style={{}}>
+          <div
+            // style={{ backgroundColor: "yellow" }}
+            className="product-price text-base"
+          >
+            US $1.78
+          </div>
+          <div
+          // style={{ backgroundColor: "red" }}
+          >
             <span className="price-discount text-base">US$2.99</span>
             <span className="price-discount-percent text-base">30% Off</span>
           </div>
-          {/* <div className="price-discount-percent text-base">(30% off)</div> */}
         </div>
       </div>
     </>
