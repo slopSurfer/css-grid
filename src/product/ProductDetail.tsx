@@ -6,12 +6,18 @@ export const ProductDetail = () => {
     <div>
       <Title>Product Details</Title>
       <MainGrid>
-        <ProductImage
-          alt="pic"
-          src="https://i.etsystatic.com/19375526/r/il/ce1a78/1752910912/il_1140xN.1752910912_ey4x.jpg"
-        />
-        {/* <div>hello</div> */}
-        <div>hello</div>
+        <Column /* style={{ backgroundColor: "red" }} */>
+          <ProductImage
+            alt="pic"
+            src="https://i.etsystatic.com/19375526/r/il/ce1a78/1752910912/il_1140xN.1752910912_ey4x.jpg"
+          />
+        </Column>
+        <Column>
+          <ProductTitle>
+            Pet Portrait, Pet Portraits, Cat Watercolour, Dog Watercolour,
+            Staffy Art, Custom Pet Portrait, Personalized Portrait, Staffy Lover
+          </ProductTitle>
+        </Column>
       </MainGrid>
     </div>
   );
@@ -19,33 +25,43 @@ export const ProductDetail = () => {
 
 const MainGrid = styled.div`
   display: grid;
-  /* grid-template-columns: repeat(auto-fill, minmax(28rem, 32rem)); */
-  grid-template-columns: 50% 50%;
-  /* grid-template-rows: 50% 50%; */
-  grid-gap: 1.5rem;
-  row-gap: 1.5rem;
-  margin-left: 5%;
-  margin-right: 5%;
+  grid-template-columns: 1fr 1fr;
+  /* justify-items: center; */
+  /* justify-content: center; */
+  grid-gap: 2rem;
+  /* background-color: rgba(200, 90, 60, 0.2); */
+  margin-left: 1%;
+  margin-right: 1%;
   @media (max-width: 765px) {
-    grid-template-columns: 100%;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    grid-template-columns: 1fr;
   }
   @media only screen and (min-width: 1440px) {
     margin-left: 10%;
     margin-right: 10%;
+    grid-gap: 2rem;
   }
 `;
 
-const ProductImage = styled.img`
-  width: 100%;
-  max-height: 100%;
+const Column = styled.div`
+  padding-left: 5%;
+  padding-right: 5%;
+`;
 
+const ProductTitle = styled.div`
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 2.5rem;
+  font-weight: 300;
+  /* margin-top: 10px; */
+`;
+
+const ProductImage = styled.img`
   @media (max-width: 765px) {
-    align-self: center;
-    background-color: blue;
-    width: 80%;
-    max-height: 80%;
+    /* background-color: blue; */
+    padding-left: 5%;
+    padding-right: 5%;
+    /* max-height: 40vh; */
+    /* max-width: 90%; */
+    /* width: 90%; */
   }
 `;
 
