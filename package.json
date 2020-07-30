@@ -2,15 +2,9 @@
   "name": "react-typescript",
   "version": "1.0.0",
   "description": "React and TypeScript example starter project",
-  "keywords": [
-    "typescript",
-    "react",
-    "starter"
-  ],
+  "keywords": ["typescript", "react", "starter"],
   "main": "src/index.tsx",
   "dependencies": {
-    "@types/react-router-dom": "5.1.5",
-    "@types/styled-components": "5.1.1",
     "babel-plugin-styled-components": "1.10.6",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -19,6 +13,8 @@
     "styled-components": "5.1.1"
   },
   "devDependencies": {
+    "@types/react-router-dom": "5.1.5",
+    "@types/styled-components": "5.1.1",
     "@types/react": "16.9.19",
     "@types/react-dom": "16.9.5",
     "typescript": "3.7.5"
@@ -29,12 +25,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
+  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"],
   "resolutions": {
     "styled-components": "^5"
   }
