@@ -57,9 +57,10 @@ const ProductTitle = styled.div`
 const ProductImage = styled.img`
   @media (max-width: 765px) {
     /* background-color: blue; */
-    padding-left: 5%;
-    padding-right: 5%;
-    /* max-height: 40vh; */
+    /* padding-left: 5%; */
+    /* padding-right: 5%; */
+    max-width: 100%;
+    max-height: 100%;
     /* max-width: 90%; */
     /* width: 90%; */
   }
