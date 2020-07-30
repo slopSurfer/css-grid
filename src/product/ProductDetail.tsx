@@ -6,13 +6,13 @@ export const ProductDetail = () => {
     <div>
       <Title>Product Details</Title>
       <MainGrid>
-        <Column /* style={{ backgroundColor: "red" }} */>
+        <Column style={{ backgroundColor: "red" }}>
           <ProductImage
             alt="pic"
             src="https://i.etsystatic.com/19375526/r/il/ce1a78/1752910912/il_1140xN.1752910912_ey4x.jpg"
           />
         </Column>
-        <Column>
+        <Column style={{ backgroundColor: "green" }}>
           <ProductTitle>
             Pet Portrait, Pet Portraits, Cat Watercolour, Dog Watercolour,
             Staffy Art, Custom Pet Portrait, Personalized Portrait, Staffy Lover
@@ -55,6 +55,8 @@ const ProductTitle = styled.div`
 `;
 
 const ProductImage = styled.img`
+  max-width: 100%;
+  max-height: 100%;
   @media (max-width: 765px) {
     /* background-color: blue; */
     /* padding-left: 5%; */
