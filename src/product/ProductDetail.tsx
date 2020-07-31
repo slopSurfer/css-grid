@@ -108,24 +108,28 @@ const MainGrid = styled.div`
 const Column = styled.div``;
 
 const ButtonBasket = styled.button`
+  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
   outline: 0;
   border-radius: 40px;
+  /* border-width: 0.1rem; */
+  /* border-color: rgba(0, 0, 0, 0.91); */
   /* border-radius: 0.28571429rem; */
   margin-top: 10px;
   width: 100%;
   height: 42px;
   background: rgba(0, 0, 0, 0.91);
   color: white;
+  /* color: rgba(0, 0, 0, 0.91); */
   font-size: 1em;
-  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
 `;
 
 const SelectPets = styled.select`
   font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
   color: rgb(0 0 0 / 0.8);
+  background-color: rgb(252, 252, 252);
   text-indent: 5px;
   line-height: 1.21rem;
-  border-color: rgba(34, 34, 34, 0.15);
+  border-color: rgba(34, 36, 38, 0.15);
   border-width: 1px;
   border-radius: 6px;
   height: 40px;
@@ -135,7 +139,11 @@ const SelectPets = styled.select`
   outline: 0;
   &:hover {
     border-color: rgba(0, 0, 0, 0.3);
+    background-color: rgb(255, 255, 255);
     border-width: 1px;
+  }
+  &:focus {
+    border-color: #85b7d9;
   }
   cursor: pointer;
   box-shadow: 0 0px 0px 0 rgba(34, 34, 34, 0.2),
@@ -143,10 +151,11 @@ const SelectPets = styled.select`
 `;
 
 const ProductTitle = styled.div`
-  color: rgba(0, 0, 0, 0.81);
+  color: rgba(0, 0, 0, 0.9);
   font-size: 2.5rem;
   font-weight: 300;
   line-height: 3rem;
+  font-stretch: extra-condensed;
   @media (max-width: 768px) {
     font-size: 1.75rem;
     line-height: 2.25rem;
