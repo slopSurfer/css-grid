@@ -21,7 +21,6 @@ export const ProductCard = () => {
           alt="pic"
           src="https://i.etsystatic.com/23307682/c/2446/1944/0/940/il/bc9521/2442286069/il_340x270.2442286069_e5j4.jpg"
         />
-        {/* <div className="product-image" /> */}
         <div className="title text-base">Pet Portrait, Custom canvas</div>
         <div className="sub-title text-base">Pet Pawtraits studio</div>
         <div className="price-grid">

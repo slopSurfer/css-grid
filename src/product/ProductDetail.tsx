@@ -1,8 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Dropdown } from "semantic-ui-react";
+// import { Dropdown } from "semantic-ui-react";
 
-const friendOptions = [
+/* const friendOptions = [
   {
     key: "Jenny Hess",
     text: "Jenny Hess",
@@ -39,7 +39,7 @@ const friendOptions = [
     value: "Justen Kitsune",
     // image: { avatar: true, src: "/images/avatar/small/justen.jpg" },
   },
-];
+]; */
 
 export const ProductDetail = () => {
   return (
@@ -57,29 +57,27 @@ export const ProductDetail = () => {
           </ProductTitle>
           <br />
           <SubHeading>Number of Pets</SubHeading>
-          <SelectPets>
+          <SelectPets style={{ width: "100%" }}>
             <option value="1">1 Pet</option>
             <option value="2">2 Pets</option>
             <option value="1">3 Pets</option>
             <option value="1">4 Pets</option>
           </SelectPets>
-          {/*   <TomatoButton>
-            <option value="1">1 Pet</option>
-            <option value="2">2 Pets</option>
+          <SubHeading>Size</SubHeading>
+          <SelectPets style={{ width: "100%" }}>
+            <option value="1">6 x 4</option>
+            <option value="2">10 x 8</option>
             <option value="1">3 Pets</option>
             <option value="1">4 Pets</option>
-          </TomatoButton> */}
-          <SubHeading>Size</SubHeading>
-          <Dropdown
-            style={{ marginTop: "0px" }}
-            placeholder="Select number of pets"
-            fluid
-            selection
-            options={friendOptions}
-          />
+          </SelectPets>
+          <br />
+          <br />
+          <SubHeading>Personalised Message</SubHeading>
+          <Input style={{ width: "100%" }} />
 
           <br />
-          <ButtonBasket>Add to Backet</ButtonBasket>
+          <br />
+          <ButtonBasket>Add to Basket</ButtonBasket>
         </Column>
       </MainGrid>
     </div>
@@ -94,11 +92,12 @@ const MainGrid = styled.div`
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 4rem;
+  margin-bottom: 5%;
   /* background-color: blue; */
-  @media (max-width: 768px) {
+  @media (max-width: 834px) {
     grid-template-columns: 1fr;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
   }
   @media only screen and (min-width: 1440px) {
     margin-left: 20%;
@@ -109,31 +108,35 @@ const MainGrid = styled.div`
 const Column = styled.div``;
 
 const ButtonBasket = styled.button`
+  outline: 0;
   border-radius: 40px;
+  /* border-radius: 0.28571429rem; */
   margin-top: 10px;
   width: 100%;
-  height: 40px;
+  height: 42px;
   background: rgba(0, 0, 0, 0.91);
   color: white;
+  font-size: 1em;
+  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
 `;
 
 const SelectPets = styled.select`
-  color: #222;
+  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  color: rgb(0 0 0 / 0.8);
   text-indent: 5px;
-  /* margin-top: 0px; */
+  line-height: 1.21rem;
   border-color: rgba(34, 34, 34, 0.15);
   border-width: 1px;
   border-radius: 6px;
-  font-size: 16px;
   height: 40px;
   padding-left: 12px;
   padding-right: 36px;
-  width: 100%;
+  max-width: 100%;
+  outline: 0;
   &:hover {
     border-color: rgba(0, 0, 0, 0.3);
     border-width: 1px;
   }
-
   cursor: pointer;
   box-shadow: 0 0px 0px 0 rgba(34, 34, 34, 0.2),
     0 1px 12px 0 rgba(34, 34, 34, 0.2);
@@ -149,19 +152,41 @@ const ProductTitle = styled.div`
     line-height: 2.25rem;
   }
 `;
+
 const ProductImage = styled.img`
   /* import to keep <ims> centered in column */
   margin: auto;
   /* --------- */
-  max-height: 60vh;
+  max-height: 80vh;
+  @media (max-width: 834px) {
+    max-height: 60vh;
+    margin: auto;
+  }
 `;
 
 const SubHeading = styled.div`
   color: rgba(0, 0, 0, 0.7);
+  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
   font-weight: 300;
   /* text-align: center; */
   margin-top: 10px;
   margin-bottom: 5px;
   /* margin-bottom: 20px; */
+`;
+
+const Input = styled.input`
+  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  color: rgb(0 0 0 / 0.8);
+  padding: 0.67857143em 1em;
+  line-height: 1.21rem;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  border-radius: 0.28571429rem;
+  outline: 0;
+  max-width: 100%;
+  text-align: left;
+  background: #fff;
+  &:focus {
+    border-color: #85b7d9;
+  }
 `;
