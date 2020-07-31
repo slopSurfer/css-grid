@@ -117,18 +117,6 @@ const ButtonBasket = styled.button`
   color: white;
 `;
 
-const DemoButton = styled.button`
-  /* Adapt the colors based on primary prop */
-  background: ${props => (props.primary ? "palevioletred" : "white")};
-  color: ${props => (props.primary ? "white" : "palevioletred")};
-
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid palevioletred;
-  border-radius: 3px;
-`;
-
 const SelectPets = styled.select`
   color: #222;
   text-indent: 5px;
@@ -149,17 +137,6 @@ const SelectPets = styled.select`
   cursor: pointer;
   box-shadow: 0 0px 0px 0 rgba(34, 34, 34, 0.2),
     0 1px 12px 0 rgba(34, 34, 34, 0.2);
-`;
-const TomatoButton = styled(SelectPets)`
-  /* color: tomato; */
-  border-color: red;
-  option-hover : {
-  }
-  /* hover: {
-    border-color: rgba(0, 0, 34, 0.5);
-    border-width: 10px;
-    border-radius: 6px;
-  } */
 `;
 
 const ProductTitle = styled.div`
