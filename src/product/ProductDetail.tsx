@@ -166,8 +166,10 @@ const ProductTitle = styled.div`
   color: rgba(0, 0, 0, 0.81);
   font-size: 2.5rem;
   font-weight: 300;
+  line-height: 3rem;
   @media (max-width: 768px) {
     font-size: 1.75rem;
+    line-height: 2.25rem;
   }
 `;
 const ProductImage = styled.img`
