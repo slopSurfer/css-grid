@@ -39,9 +39,9 @@ function Navbar() {
   return (
     <div>
       <Link to="/">Home </Link>
-      <Link to="/product">Product </Link>
-      <Link to="/productdetail">Product Details </Link>
-      <Link to="/about">About Us </Link>
+      <Link to="/product"> Product </Link>
+      <Link to="/productdetail"> Product Details </Link>
+      <Link to="/about"> About Us </Link>
     </div>
   );
 }
