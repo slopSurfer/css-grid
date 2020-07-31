@@ -55,32 +55,31 @@ export const ProductDetail = () => {
           <ProductTitle>
             Personalized Portrait of Lilly the Wonder cat
           </ProductTitle>
+          <br />
+          <SubHeading>Number of Pets</SubHeading>
           <SelectPets>
             <option value="1">1 Pet</option>
             <option value="2">2 Pets</option>
             <option value="1">3 Pets</option>
             <option value="1">4 Pets</option>
           </SelectPets>
+          {/*   <TomatoButton>
+            <option value="1">1 Pet</option>
+            <option value="2">2 Pets</option>
+            <option value="1">3 Pets</option>
+            <option value="1">4 Pets</option>
+          </TomatoButton> */}
+          <SubHeading>Size</SubHeading>
           <Dropdown
-            style={{ marginTop: "10px" }}
+            style={{ marginTop: "0px" }}
             placeholder="Select number of pets"
             fluid
             selection
             options={friendOptions}
           />
-          <Button
-            style={{
-              borderRadius: "40px",
-              marginTop: "10px",
-              width: "100%",
-              height: "40px",
-              // backgroundColor: #fffff,
-            }}
-            size="big"
-            color={"black"}
-          >
-            Add to Basket
-          </Button>
+
+          <br />
+          <ButtonBasket>Add to Backet</ButtonBasket>
         </Column>
       </MainGrid>
     </div>
@@ -109,10 +108,31 @@ const MainGrid = styled.div`
 
 const Column = styled.div``;
 
+const ButtonBasket = styled.button`
+  border-radius: 40px;
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.91);
+  color: white;
+`;
+
+const DemoButton = styled.button`
+  /* Adapt the colors based on primary prop */
+  background: ${props => (props.primary ? "palevioletred" : "white")};
+  color: ${props => (props.primary ? "white" : "palevioletred")};
+
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+`;
+
 const SelectPets = styled.select`
   color: #222;
   text-indent: 5px;
-  margin-top: 10px;
+  /* margin-top: 0px; */
   border-color: rgba(34, 34, 34, 0.15);
   border-width: 1px;
   border-radius: 6px;
@@ -121,10 +141,25 @@ const SelectPets = styled.select`
   padding-left: 12px;
   padding-right: 36px;
   width: 100%;
+  &:hover {
+    border-color: rgba(0, 0, 0, 0.3);
+    border-width: 1px;
+  }
+
   cursor: pointer;
-  box-shadow: 
-    /* 0 1px 6px 0 rgba(34, 34, 34, 0.2), */ 0 1px 12px 0
-    rgba(34, 34, 34, 0.2);
+  box-shadow: 0 0px 0px 0 rgba(34, 34, 34, 0.2),
+    0 1px 12px 0 rgba(34, 34, 34, 0.2);
+`;
+const TomatoButton = styled(SelectPets)`
+  /* color: tomato; */
+  border-color: red;
+  option-hover : {
+  }
+  /* hover: {
+    border-color: rgba(0, 0, 34, 0.5);
+    border-width: 10px;
+    border-radius: 6px;
+  } */
 `;
 
 const ProductTitle = styled.div`
@@ -133,7 +168,6 @@ const ProductTitle = styled.div`
   font-weight: 300;
   @media (max-width: 768px) {
     font-size: 1.75rem;
-    /* text-align: center; */
   }
 `;
 const ProductImage = styled.img`
@@ -143,11 +177,12 @@ const ProductImage = styled.img`
   max-height: 60vh;
 `;
 
-// const Title = styled.h1`
-//   color: rgba(0, 0, 0, 0.8);
-//   font-size: 1.7rem;
-//   font-weight: 400;
-//   text-align: center;
-//   margin-top: 20px;
-//   margin-bottom: 20px;
-// `;
+const SubHeading = styled.div`
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.1rem;
+  font-weight: 300;
+  /* text-align: center; */
+  margin-top: 10px;
+  margin-bottom: 5px;
+  /* margin-bottom: 20px; */
+`;
