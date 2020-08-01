@@ -1,14 +1,16 @@
 import * as React from "react";
 import { render } from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
-import "semantic-ui-css/semantic.min.css";
+import { ThemeProvider } from "@chakra-ui/core";
 
 import App from "./App";
 
 const rootElement = document.getElementById("root");
 render(
-  <Router>
-    <App />
-  </Router>,
+  <ThemeProvider>
+    <Router>
+      <App />
+    </Router>
+  </ThemeProvider>,
   rootElement
 );

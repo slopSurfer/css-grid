@@ -1,49 +1,13 @@
 import * as React from "react";
 import styled from "styled-components";
-// import { Dropdown } from "semantic-ui-react";
-
-/* const friendOptions = [
-  {
-    key: "Jenny Hess",
-    text: "Jenny Hess",
-    value: "Jenny Hess",
-    // image: { avatar: true, src: "/images/avatar/small/jenny.jpg" },
-  },
-  {
-    key: "Elliot Fu",
-    text: "Elliot Fu",
-    value: "Elliot Fu",
-    // image: { avatar: true, src: "/images/avatar/small/elliot.jpg" },
-  },
-  {
-    key: "Stevie Feliciano",
-    text: "Stevie Feliciano",
-    value: "Stevie Feliciano",
-    // image: { avatar: true, src: "/images/avatar/small/stevie.jpg" },
-  },
-  {
-    key: "Christian",
-    text: "Christian",
-    value: "Christian",
-    // image: { avatar: true, src: "/images/avatar/small/christian.jpg" },
-  },
-  {
-    key: "Matt",
-    text: "Matt",
-    value: "Matt",
-    // image: { avatar: true, src: "/images/avatar/small/matt.jpg" },
-  },
-  {
-    key: "Justen Kitsune",
-    text: "Justen Kitsune",
-    value: "Justen Kitsune",
-    // image: { avatar: true, src: "/images/avatar/small/justen.jpg" },
-  },
-]; */
+import { Button, Select, Stack } from "@chakra-ui/core";
 
 export const ProductDetail = () => {
   return (
     <div>
+      <Button size="lg" variantColor="red">
+        Button
+      </Button>
       <MainGrid>
         <Column /* style={{ backgroundColor: "red" }} */>
           <ProductImage
@@ -56,14 +20,14 @@ export const ProductDetail = () => {
             Personalized Portrait of Lilly the Wonder cat
           </ProductTitle>
           <br />
-          <SubHeading>Number of Pets</SubHeading>
+          <SubHeading>number of pets</SubHeading>
           <SelectPets style={{ width: "100%" }}>
             <option value="1">1 Pet</option>
             <option value="2">2 Pets</option>
             <option value="1">3 Pets</option>
             <option value="1">4 Pets</option>
           </SelectPets>
-          <SubHeading>Size</SubHeading>
+          <SubHeading>size</SubHeading>
           <SelectPets style={{ width: "100%" }}>
             <option value="1">6 x 4</option>
             <option value="2">10 x 8</option>
@@ -72,8 +36,19 @@ export const ProductDetail = () => {
           </SelectPets>
           <br />
           <br />
-          <SubHeading>Personalised Message</SubHeading>
-          <Input style={{ width: "100%" }} />
+          <Stack spacing={3}>
+            <Select size="lg" placeholder="Get Some" variant="outline">
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+              <option value="option3">Option 3</option>
+            </Select>
+          </Stack>
+          <br />
+          <SubHeading>personalised message</SubHeading>
+          <Input
+            style={{ width: "100%" }}
+            placeholder="your animals name for example"
+          />
 
           <br />
           <br />
@@ -195,6 +170,10 @@ const Input = styled.input`
   max-width: 100%;
   text-align: left;
   background: #fff;
+  ::placeholder {
+    color: rgb(0 0 0 / 0.5);
+    font-size: 1.1rem;
+  }
   &:focus {
     border-color: #85b7d9;
   }
