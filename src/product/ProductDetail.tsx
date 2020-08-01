@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Button, Select, Stack } from "@chakra-ui/core";
+import { Button, Select, Stack, Input } from "@chakra-ui/core";
 
 export const ProductDetail = () => {
   return (
@@ -36,6 +36,12 @@ export const ProductDetail = () => {
           </SelectPets>
           <br />
           <br />
+          <Stack spacing={6}>
+            <Input placeholder="large size" size="lg" />
+            <Input placeholder="default size" size="md" />
+            <Input placeholder="small size" size="sm" />
+          </Stack>
+          <br />
           <Stack spacing={3}>
             <Select size="lg" placeholder="Get Some" variant="outline">
               <option value="option1">Option 1</option>
@@ -45,7 +51,7 @@ export const ProductDetail = () => {
           </Stack>
           <br />
           <SubHeading>personalised message</SubHeading>
-          <Input
+          <InputSN
             style={{ width: "100%" }}
             placeholder="your animals name for example"
           />
@@ -159,7 +165,7 @@ const SubHeading = styled.div`
   /* margin-bottom: 20px; */
 `;
 
-const Input = styled.input`
+const InputSN = styled.input`
   font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
   color: rgb(0 0 0 / 0.8);
   padding: 0.67857143em 1em;
