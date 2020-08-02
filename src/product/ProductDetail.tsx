@@ -19,10 +19,7 @@ export const ProductDetail = () => {
               <form className="mt-6 border-t border-gray-400 pt-4">
                 <div className="flex flex-wrap -mx-3 mb-6">
                   <div className="w-full md:w-full px-3 mb-6">
-                    <label
-                      className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                      for="grid-text-1"
-                    >
+                    <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                       email address
                     </label>
                     <input
