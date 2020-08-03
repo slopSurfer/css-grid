@@ -1,12 +1,12 @@
 import * as React from "react";
 import styled from "styled-components";
-// import {
-//   Select,
-//   Stack,
-//   Input,
-//   InputGroup,
-//   InputLeftAddon,
-// } from "@chakra-ui/core";
+import {
+  Select,
+  // Stack,
+  Input,
+  // InputGroup,
+  // InputLeftAddon,
+} from "@chakra-ui/core";
 
 export const ProductDetail = () => {
   return (
@@ -23,15 +23,28 @@ export const ProductDetail = () => {
             Personalized Portrait of Lilly the Wonder cat
           </ProductTitle>
           <br />
-          <input
+          {/* <input
             type="text"
-            className="border  text-gray-800 h-12 rounded-lg shadow.sm w-full py-2 px-3 focus:outline-none"
+            className="border text-gray-800 h-12 rounded-lg shadow.sm w-full py-2 px-3 focus:outline-none"
+          /> */}
+          <Input
+            className="rounded"
+            placeholder="chakra"
+            mt="10px"
+            // size="md"
           />
+
           <br />
-          <br />
+          <Select placeholder="Select option" mt="20px" mb="20px">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </Select>
+
+          <SubHeading>tailwind select</SubHeading>
           <select
             style={{ width: "100%" }}
-            className="border rounded-lg h-12 text-gray-800 shadow.sm w-full py-2 px-3 focus:outline-none"
+            className="border rounded-lg text-gray-800 shadow.sm w-full py-2 px-3 focus:outline-none"
           >
             <option value="1">1 Pet</option>
             <option value="2">2 Pets</option>
