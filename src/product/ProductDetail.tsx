@@ -4,6 +4,7 @@ import {
   Select,
   // Stack,
   Input,
+  Text,
   // InputGroup,
   // InputLeftAddon,
 } from "@chakra-ui/core";
@@ -18,41 +19,78 @@ export const ProductDetail = () => {
             src="https://i.etsystatic.com/19375526/r/il/ce1a78/1752910912/il_1140xN.1752910912_ey4x.jpg"
           />
         </Column>
-        <Column /* style={{ backgroundColor: "green" }} */>
+        <Column>
           <ProductTitle>
             Personalized Portrait of Lilly the Wonder cat
           </ProductTitle>
-          <br />
-          {/* <input
-            type="text"
-            className="border text-gray-800 h-12 rounded-lg shadow.sm w-full py-2 px-3 focus:outline-none"
-          /> */}
-          <Input
-            className="rounded"
-            placeholder="chakra"
-            mt="10px"
-            // size="md"
-          />
 
-          <br />
-          <Select placeholder="Select option" mt="20px" mb="20px">
+          <Text
+            mt={10}
+            color="black"
+            opacity={0.7}
+            fontWeight={300}
+            fontSize="lg"
+            fontFamily="Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif"
+          >
+            personalised message
+          </Text>
+          <Input
+            placeholder="enter text..."
+            mt={2}
+            mb={10}
+            h={30}
+            fontSize={12}
+            color="gray.600"
+            borderRadius="lg"
+            borderColor="gray.300"
+          />
+          <Text
+            mt="20px"
+            color="black"
+            opacity={0.7}
+            fontWeight={300}
+            fontSize="lg"
+            fontFamily="Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif"
+          >
+            number of pets
+          </Text>
+          <Select
+            placeholder="Select Option"
+            color="gray.600"
+            borderColor="gray.300"
+            h={30}
+            fontSize={12}
+            mt={2}
+          >
             <option value="option1">Option 1</option>
             <option value="option2">Option 2</option>
             <option value="option3">Option 3</option>
           </Select>
 
-          <SubHeading>tailwind select</SubHeading>
-          <select
-            style={{ width: "100%" }}
-            className="border rounded-lg text-gray-800 shadow.sm w-full py-2 px-3 focus:outline-none"
+          <Text
+            mt="20px"
+            color="black"
+            opacity={0.7}
+            fontWeight={300}
+            fontSize="lg"
+            fontFamily="Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif"
           >
-            <option value="1">1 Pet</option>
-            <option value="2">2 Pets</option>
-            <option value="1">3 Pets</option>
-            <option value="1">4 Pets</option>
-          </select>
-          <br />
-          <br />
+            size
+          </Text>
+          <Select
+            placeholder="Select image size"
+            color="gray.600"
+            borderColor="gray.300"
+            h={30}
+            fontSize={12}
+            mt={2}
+            mb={10}
+          >
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </Select>
+
           {/*  <InputGroup>
             <InputLeftAddon children="+234" />
             <Input type="tel" roundedLeft="0" placeholder="phone number" />
@@ -71,21 +109,6 @@ export const ProductDetail = () => {
             <option value="1">3 Pets</option>
             <option value="1">4 Pets</option>
           </SelectPets>
-          <br />
-          <br />
-          {/*  <Stack spacing={6}>
-            <Input placeholder="large size" size="lg" />
-            <Input placeholder="default size" size="md" />
-            <Input placeholder="small size" size="sm" />
-          </Stack> */}
-          <br />
-          {/*  <Stack spacing={3}>
-            <Select size="lg" placeholder="Get Some" variant="outline">
-              <option value="option1">Option 1</option>
-              <option value="option2">Option 2</option>
-              <option value="option3">Option 3</option>
-            </Select>
-          </Stack> */}
           <br />
           <SubHeading>personalised message</SubHeading>
           <InputSN
