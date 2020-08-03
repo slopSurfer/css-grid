@@ -9,7 +9,33 @@ import {
   // InputLeftAddon,
 } from "@chakra-ui/core";
 
+interface titleProps {
+  title: string;
+  color?: string;
+  sizes?: string;
+  opacity?: number;
+}
+
 export const ProductDetail = () => {
+  const TitleText = ({
+    title,
+    color = "black",
+    sizes = "lg",
+    opacity = 1,
+  }: titleProps) => {
+    return (
+      <Text
+        mt={10}
+        color={color}
+        opacity={opacity}
+        fontWeight={300}
+        fontSize={sizes}
+        fontFamily="Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif"
+      >
+        {title}
+      </Text>
+    );
+  };
   return (
     <div>
       <MainGrid>
@@ -20,46 +46,35 @@ export const ProductDetail = () => {
           />
         </Column>
         <Column>
-          <ProductTitle>
-            Personalized Portrait of Lilly the Wonder cat
-          </ProductTitle>
+          <TitleText
+            color="gray.900"
+            sizes="3xl"
+            title=" Personalized Portrait of Lilly the Wonder cat"
+          />
 
-          <Text
-            mt={10}
-            color="black"
-            opacity={0.7}
-            fontWeight={300}
-            fontSize="lg"
-            fontFamily="Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif"
-          >
-            personalised message
-          </Text>
+          {/* <ProductTitle>
+            Personalized Portrait of Lilly the Wonder cat
+          </ProductTitle> */}
+
+          <TitleText sizes="xl" color="gray.800" title="personalised message" />
           <Input
             placeholder="enter text..."
             mt={2}
             mb={10}
-            h={30}
-            fontSize={12}
+            h="37px"
+            fontSize="15px"
             color="gray.600"
             borderRadius="lg"
             borderColor="gray.300"
           />
-          <Text
-            mt="20px"
-            color="black"
-            opacity={0.7}
-            fontWeight={300}
-            fontSize="lg"
-            fontFamily="Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif"
-          >
-            number of pets
-          </Text>
+          <TitleText sizes="xl" title="number of pets" />
           <Select
-            placeholder="Select Option"
-            color="gray.600"
+            placeholder="how many pets"
+            color="gray.500"
+            h="37px"
+            fontSize="15px"
             borderColor="gray.300"
-            h={30}
-            fontSize={12}
+            borderRadius="lg"
             mt={2}
           >
             <option value="option1">Option 1</option>
@@ -67,22 +82,14 @@ export const ProductDetail = () => {
             <option value="option3">Option 3</option>
           </Select>
 
-          <Text
-            mt="20px"
-            color="black"
-            opacity={0.7}
-            fontWeight={300}
-            fontSize="lg"
-            fontFamily="Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif"
-          >
-            size
-          </Text>
+          <TitleText title="size" />
           <Select
-            placeholder="Select image size"
-            color="gray.600"
+            placeholder="image size"
+            color="gray.500"
             borderColor="gray.300"
-            h={30}
-            fontSize={12}
+            borderRadius="lg"
+            h="37px"
+            fontSize="15px"
             mt={2}
             mb={10}
           >
@@ -91,11 +98,7 @@ export const ProductDetail = () => {
             <option value="option3">Option 3</option>
           </Select>
 
-          {/*  <InputGroup>
-            <InputLeftAddon children="+234" />
-            <Input type="tel" roundedLeft="0" placeholder="phone number" />
-          </InputGroup> */}
-          <SubHeading>number of pets</SubHeading>
+          {/*           <SubHeading>number of pets</SubHeading>
           <SelectPets style={{ width: "100%" }}>
             <option value="1">1 Pet</option>
             <option value="2">2 Pets</option>
@@ -115,8 +118,7 @@ export const ProductDetail = () => {
             style={{ width: "100%" }}
             placeholder="your animals name for example"
           />
-
-          <br />
+ */}
           <br />
           <ButtonBasket>Add to Basket</ButtonBasket>
         </Column>
@@ -152,19 +154,17 @@ const ButtonBasket = styled.button`
   font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
   outline: 0;
   border-radius: 40px;
-  /* border-width: 0.1rem; */
-  /* border-color: rgba(0, 0, 0, 0.91); */
-  /* border-radius: 0.28571429rem; */
   margin-top: 10px;
   width: 100%;
   height: 42px;
-  background: rgba(0, 0, 0, 0.91);
+  /* background: rgba(0, 0, 0, 0.91); */
+  background: #258e25;
   color: white;
   /* color: rgba(0, 0, 0, 0.91); */
   font-size: 1em;
 `;
 
-const SelectPets = styled.select`
+/* const SelectPets = styled.select`
   font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
   color: rgb(0 0 0 / 0.8);
   background-color: rgb(252, 252, 252);
@@ -189,9 +189,9 @@ const SelectPets = styled.select`
   cursor: pointer;
   box-shadow: 0 0px 0px 0 rgba(34, 34, 34, 0.2),
     0 1px 12px 0 rgba(34, 34, 34, 0.2);
-`;
+`; */
 
-const ProductTitle = styled.div`
+/* const ProductTitle = styled.div`
   color: rgba(0, 0, 0, 0.9);
   font-size: 2.5rem;
   font-weight: 300;
@@ -201,7 +201,7 @@ const ProductTitle = styled.div`
     font-size: 1.75rem;
     line-height: 2.25rem;
   }
-`;
+`; */
 
 const ProductImage = styled.img`
   /* import to keep <ims> centered in column */
@@ -214,18 +214,18 @@ const ProductImage = styled.img`
   }
 `;
 
-const SubHeading = styled.div`
+/* const SubHeading = styled.div`
   color: rgba(0, 0, 0, 0.7);
   font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
   font-weight: 300;
-  /* text-align: center; */
-  margin-top: 10px;
-  margin-bottom: 5px;
-  /* margin-bottom: 20px; */
-`;
+  
+   margin-top: 10px;
+   margin-bottom: 5px;
+  
+`; */
 
-const InputSN = styled.input`
+/* const InputSN = styled.input`
   font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
   color: rgb(0 0 0 / 0.8);
   padding: 0.67857143em 1em;
@@ -243,4 +243,4 @@ const InputSN = styled.input`
   &:focus {
     border-color: #85b7d9;
   }
-`;
+`; */
