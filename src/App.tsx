@@ -3,6 +3,8 @@ import { Route, Switch, Link } from "react-router-dom";
 import { GridBox } from "./GridDemo";
 import { ProductDetail } from "./product/ProductDetail";
 import "./styles.css";
+import "./GridDemo";
+import "./navbar-styles.css";
 
 export default function App() {
   return (
@@ -37,11 +39,27 @@ function About() {
 }
 function Navbar() {
   return (
-    <div>
-      <Link to="/">Home </Link>
-      <Link to="/product"> Product </Link>
-      <Link to="/productdetail"> Product Details </Link>
-      <Link to="/about"> About Us </Link>
+    <div className="nav-header">
+      <div className="nav-container">
+        <Link className="nav-item" to="/">
+          Home{" "}
+        </Link>
+
+        <Link className="nav-item" to="/product">
+          {" "}
+          Product{" "}
+        </Link>
+
+        <Link className="nav-item" to="/productdetail">
+          {" "}
+          Product Details{" "}
+        </Link>
+
+        <Link className="nav-item" to="/about">
+          {" "}
+          About Us{" "}
+        </Link>
+      </div>
     </div>
   );
 }
