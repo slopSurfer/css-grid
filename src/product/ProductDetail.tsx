@@ -5,6 +5,8 @@ import {
   // Stack,
   Input,
   Text,
+  Badge,
+  Stack,
   // InputGroup,
   // InputLeftAddon,
 } from "@chakra-ui/core";
@@ -14,6 +16,7 @@ interface titleProps {
   color?: string;
   sizes?: string;
   opacity?: number;
+  mt?: number;
 }
 
 export const ProductDetail = () => {
@@ -22,10 +25,11 @@ export const ProductDetail = () => {
     color = "black",
     sizes = "lg",
     opacity = 1,
+    mt = 10,
   }: titleProps) => {
     return (
       <Text
-        mt={10}
+        mt={mt}
         color={color}
         opacity={opacity}
         fontWeight={300}
@@ -46,15 +50,35 @@ export const ProductDetail = () => {
           />
         </Column>
         <Column>
+          {/* <Stack spacing={2}> */}
           <TitleText
             color="gray.900"
-            sizes="3xl"
+            sizes="4xl"
             title=" Personalized Portrait of Lilly the Wonder cat"
+            mt={0}
           />
 
-          {/* <ProductTitle>
-            Personalized Portrait of Lilly the Wonder cat
-          </ProductTitle> */}
+          <Badge
+            fontSize="0.9rem"
+            bg="#e5cfb2"
+            px={3}
+            py={1}
+            borderRadius={10}
+            mt={4}
+          >
+            Best Seller
+          </Badge>
+
+          <Text
+            mt={4}
+            opacity={0.91}
+            fontWeight={500}
+            fontSize="26px"
+            fontFamily="Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif"
+          >
+            AU$3.95+
+          </Text>
+          <TitleText mt={0} title="gst where applicable" />
 
           <TitleText sizes="xl" color="gray.800" title="personalised message" />
           <Input
@@ -158,7 +182,8 @@ const ButtonBasket = styled.button`
   width: 100%;
   height: 42px;
   /* background: rgba(0, 0, 0, 0.91); */
-  background: #258e25;
+  /* background: #258e25; // rgb(19, 139, 91) */
+  background: rgb(19, 139, 91);
   color: white;
   /* color: rgba(0, 0, 0, 0.91); */
   font-size: 1em;
