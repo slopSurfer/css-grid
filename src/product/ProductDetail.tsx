@@ -6,7 +6,7 @@ import {
   Input,
   Text,
   Badge,
-  Stack,
+  // Stack,
   // InputGroup,
   // InputLeftAddon,
 } from "@chakra-ui/core";
@@ -50,7 +50,6 @@ export const ProductDetail = () => {
           />
         </Column>
         <Column>
-          {/* <Stack spacing={2}> */}
           <TitleText
             color="gray.900"
             sizes="4xl"
@@ -122,6 +121,21 @@ export const ProductDetail = () => {
             <option value="option3">Option 3</option>
           </Select>
 
+          <ButtonBasket>Add to Basket</ButtonBasket>
+
+          <TitleText title="Description" />
+          <Text opacity={0.8} mt={2}>
+            Custom Watercolor Pet Portrait, Pet Portrait, Custom Dog Portrait,
+            Pet Illustration, Pet Art Print, Dog Lover Gift, Personalised Gift,
+            Custom Pet Portrait, Personalised Pet Portrait, Pet Illustration,
+            Dog Gift, Printable Digital Portrait, Custom Pet Print, Digital
+            Watercolour Portrait, Pet Loss Gift, Dog Passed Away Gift,
+            Personalised Pet, Family Pet, Gift For Her, Gift For Him, Valentines
+            Gift, Custom Dog Portrait, Wall Art. ***PLEASE NOTE THAT THIS IS FOR
+            A PHYSICAL PRINTED COPY*** IF YOU WOULD LIKE A DIGITAL COPY, THEN
+            PLEASE PURCHASE VIA THE FOLLOWING PRODUCT LINK:
+          </Text>
+
           {/*           <SubHeading>number of pets</SubHeading>
           <SelectPets style={{ width: "100%" }}>
             <option value="1">1 Pet</option>
@@ -143,8 +157,6 @@ export const ProductDetail = () => {
             placeholder="your animals name for example"
           />
  */}
-          <br />
-          <ButtonBasket>Add to Basket</ButtonBasket>
         </Column>
       </MainGrid>
     </div>
