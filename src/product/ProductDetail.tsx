@@ -43,7 +43,8 @@ export const ProductDetail = () => {
     );
   };
   return (
-    <div>
+    <div style={{ backgroundColor: "rgb(252,252,252)", height: "100vh" }}>
+      {/* // <div> */}
       <MainGrid>
         <Column>
           <ProductImage
@@ -140,19 +141,42 @@ export const ProductDetail = () => {
           FOLLOWING PRODUCT LINK:
         </Text>
 
-        <AccordionItem mt={6}>
-          <AccordionHeader /* _expanded={{ bg: "tomato", color: "white" }} */>
+        <AccordionItem mt={6} defaultIsOpen={true}>
+          <AccordionHeader>
             <Box flex="1" textAlign="left" fontSize="2xl">
               How to order. Required information
             </Box>
             <AccordionIcon />
           </AccordionHeader>
-          <AccordionPanel bg="yellow.100">
+          <AccordionPanel bg="yellow.100" rounded="lg">
             In order for me to get started on creating your piece of art, I
             would ask that you provide me with 2-3 high quality pictures of your
             pet/s (face on tends to look best), and ensure to include their
             name/s and preferred background colour within the comments section
             on checking out.
+          </AccordionPanel>
+        </AccordionItem>
+
+        <AccordionItem mt={6} defaultIsOpen={true}>
+          <AccordionHeader /* _expanded={{ bg: "tomato", color: "white" }} */>
+            <Box flex="1" textAlign="left" fontSize="2xl">
+              Reviews
+            </Box>
+            <AccordionIcon />
+          </AccordionHeader>
+          <AccordionPanel bg="green.100">
+            Excellent seller quick delivery would definitely recommend this
+            seller! I’m in love with my picture Purchased item: Louise reviewed
+            Custom Watercolor Pet Portrait, Pet Portrait, Custom Dog Portrait,
+            Pet Illustration, Pet Art Print, Dog Lover Gift, Personalised Gift
+            Custom Watercolor Pet Portrait, Pet Portrait, Custom Dog Portrait,
+            Pet Illustration, Pet Art Print, Dog Lover Gift, Personalised Gift
+            Hayley 03 Aug, 2020 5 out of 5 stars Fantastic service & quality,
+            very quick delivery. We absolutely love our picture. Hayley added a
+            photo of their purchase Purchased item: Hayley reviewed Custom
+            Watercolor Pet Portrait, Pet Portrait, Custom Dog Portrait, Pet
+            Illustration, Pet Art Print, Dog Lover Gift, Personalised Gift
+            Custom Watercolor Pet Portrait, Pet Portrait, Cust
           </AccordionPanel>
         </AccordionItem>
       </Box>
@@ -163,6 +187,8 @@ export const ProductDetail = () => {
 const MainGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  /* // center it vertically when 2 columns */
+  align-items: center;
   grid-gap: 4rem;
   row-gap: 4rem;
   margin-left: 10%;
@@ -242,6 +268,7 @@ const ProductImage = styled.img`
   margin: auto;
   /* --------- */
   max-height: 80vh;
+  border-radius: 6px;
   @media (max-width: 834px) {
     max-height: 60vh;
     margin: auto;
