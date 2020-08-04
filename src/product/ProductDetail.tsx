@@ -49,7 +49,8 @@ export const ProductDetail = () => {
         <Column>
           <ProductImage
             alt="pic"
-            src="https://i.etsystatic.com/19375526/r/il/ce1a78/1752910912/il_1140xN.1752910912_ey4x.jpg"
+            // src="https://i.etsystatic.com/19375526/r/il/ce1a78/1752910912/il_1140xN.1752910912_ey4x.jpg"
+            src="https://i.etsystatic.com/16594484/r/il/f9fb38/2271689222/il_794xN.2271689222_e83g.jpg"
           />
         </Column>
         <Column>
@@ -267,10 +268,10 @@ const ProductImage = styled.img`
   /* import to keep <ims> centered in column */
   margin: auto;
   /* --------- */
-  max-height: 80vh;
+  /* max-height: 80vh; */
   border-radius: 6px;
   @media (max-width: 834px) {
-    max-height: 60vh;
+    /* max-height: 60vh; */
     margin: auto;
   }
 `;
