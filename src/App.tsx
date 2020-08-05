@@ -42,22 +42,19 @@ function Navbar() {
     <div className="nav-header">
       <div className="nav-container">
         <Link className="nav-item" to="/">
-          Home{" "}
+          Home
         </Link>
 
         <Link className="nav-item" to="/product">
-          {" "}
-          Product{" "}
+          Product
         </Link>
 
         <Link className="nav-item" to="/productdetail">
-          {" "}
-          Product Details{" "}
+          Product Details
         </Link>
 
         <Link className="nav-item" to="/about">
-          {" "}
-          About Us{" "}
+          About Us
         </Link>
       </div>
     </div>

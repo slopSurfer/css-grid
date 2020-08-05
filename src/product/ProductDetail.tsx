@@ -109,7 +109,7 @@ export const ProductDetail = () => {
             <option value="option3">Option 3</option>
           </Select>
 
-          <TitleText title="size" />
+          <TitleText sizes="xl" title="size" />
           <Select
             placeholder="image size"
             color="gray.500"
@@ -129,7 +129,7 @@ export const ProductDetail = () => {
         </Column>
       </MainGrid>
       <Box mx={["7.5%", "7.5%", "7.5%", "10%"]} mb="50px">
-        <TitleText title="Description" />
+        <TitleText sizes="xl" title="Description" />
         <Text opacity={0.8} mt={2}>
           Custom Watercolor Pet Portrait, Pet Portrait, Custom Dog Portrait, Pet
           Illustration, Pet Art Print, Dog Lover Gift, Personalised Gift, Custom
@@ -270,6 +270,7 @@ const ProductImage = styled.img`
   /* --------- */
   /* max-height: 80vh; */
   border-radius: 6px;
+  box-sizing: border-box;
   @media (max-width: 834px) {
     /* max-height: 60vh; */
     margin: auto;
