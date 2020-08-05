@@ -5,6 +5,8 @@ import { ProductDetail } from "./product/ProductDetail";
 import "./styles.css";
 import "./GridDemo";
 import "./navbar-styles.css";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { Box } from "@chakra-ui/core";
 
 export default function App() {
   return (
@@ -69,6 +71,12 @@ function Navbar() {
               cart
             </Link>
           </div>
+          <Box
+            className="mobile-container"
+            as={GiHamburgerMenu}
+            w="35px"
+            h="100%"
+          />
         </div>
       </div>
     </div>
