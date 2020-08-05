@@ -266,6 +266,7 @@ nav.drown ul li a:hover:before {
 .link-container {
   /* background-color: #89c52b; */
   display: block;
+  padding-top: 5px;
 }
 @media only screen and (max-width: 767px) {
   .link-container {
@@ -276,7 +277,7 @@ nav.drown ul li a:hover:before {
 .logo-container {
   /* background-color: #c2d49f; */
   width: 100px;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
 }
 

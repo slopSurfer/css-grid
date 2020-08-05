@@ -193,7 +193,7 @@ const MainGrid = styled.div`
   row-gap: 4rem;
   margin-left: 10%;
   margin-right: 10%;
-  padding-top: 4rem;
+  padding-top: 0.75rem;
   margin-bottom: 5%;
   /* background-color: blue; */
   @media (max-width: 834px) {
