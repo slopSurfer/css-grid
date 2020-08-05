@@ -44,7 +44,6 @@ export const ProductDetail = () => {
   };
   return (
     <div style={{ backgroundColor: "rgb(252,252,252)", height: "100vh" }}>
-      {/* // <div> */}
       <MainGrid>
         <Column>
           <ProductImage
@@ -194,7 +193,7 @@ const MainGrid = styled.div`
   row-gap: 4rem;
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 4rem;
+  padding-top: 4rem;
   margin-bottom: 5%;
   /* background-color: blue; */
   @media (max-width: 834px) {

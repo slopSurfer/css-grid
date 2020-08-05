@@ -39,23 +39,37 @@ function About() {
 }
 function Navbar() {
   return (
-    <div className="nav-header">
-      <div className="nav-container">
-        <Link className="nav-item" to="/">
-          Home
-        </Link>
+    <div style={{ backgroundColor: "rgb(252,252,252)" }}>
+      <div className="site-header-news">
+        <p className="site-announcement-message">
+          Winter sale. All items 20% off. Sale ends never (maybe).
+        </p>
+      </div>
+      <div className="site-header">
+        <div className="nav-container">
+          <div className="logo-container">Logo</div>
+          <div className="link-container">
+            <Link className="site-nav-link" to="/product">
+              shop now
+            </Link>
 
-        <Link className="nav-item" to="/product">
-          Product
-        </Link>
+            <Link className="site-nav-link" to="/productdetail">
+              how it works
+            </Link>
 
-        <Link className="nav-item" to="/productdetail">
-          Product Details
-        </Link>
+            <Link className="site-nav-link" to="/">
+              faq
+            </Link>
 
-        <Link className="nav-item" to="/about">
-          About Us
-        </Link>
+            <Link className="site-nav-link" to="/about">
+              About Us
+            </Link>
+
+            <Link className="site-nav-link" to="/">
+              cart
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

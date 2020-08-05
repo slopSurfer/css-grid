@@ -250,42 +250,90 @@ nav.drown ul li a:hover:before {
 
 /* By Dominik Biedebach @domobch */
 
-.nav-header {
+/* .nav-header {
   border-bottom: rgba(0, 0, 0, 0.3);
   border-bottom-style: solid;
   border-width: 1px;
-  /* height: 48px; */
-  /* padding-bottom: 2px; */
-}
+} */
 .nav-container {
+  /* background-color: #89c52b; */
   display: grid;
-  grid-template-columns: 1fr 1fr 1.5fr 1.5fr;
+  grid-template-columns: 20% 80%;
   justify-items: center;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-.nav-item {
-  /* display: block; */
-  padding: 16px 12px;
-  /* text-decoration: none; */
-  color: #666;
-  font-weight: 400;
-  font-size: 15px;
-  /* text-transform: uppercase; */
-  margin: 0 10px;
+  /* justify-content: center; */
 }
 
-.header-container {
+.link-container {
+  /* background-color: #89c52b; */
+  display: block;
+}
+@media only screen and (max-width: 767px) {
+  .link-container {
+    display: none;
+  }
+}
+
+.logo-container {
+  /* background-color: #c2d49f; */
+  width: 100px;
+  padding: 10px;
+  text-align: center;
+}
+
+.site-header {
   font-size: 17px;
   font-family: Montserrat, sans-serif;
-  color: #565656;
   font-weight: 400;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  line-height: 1.563;
+  /* line-height: 1.563; */
   box-sizing: border-box;
-  transition: all 0.35s cubic-bezier(0.46, 0.01, 0.32, 1);
-  position: relative;
-  z-index: 2;
+  /* display: block; */
+  /* padding: 15px 0 0; */
+}
+
+.site-header-news {
+  background-color: #1a2829;
+}
+
+.site-announcement-message {
+  font-size: 18px;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.563;
+  text-align: center;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  display: block;
+  font-weight: 500;
+  padding: 10px 30px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.site-nav-link {
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.563;
+  list-style: none;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  background: transparent;
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px;
+  white-space: nowrap;
+  color: #1a2829;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  font-size: 0.82353em;
+}
+
+.site-nav-link:hover {
+  color: rgba(0, 0, 0, 0.4);
 }
