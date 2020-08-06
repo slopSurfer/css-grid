@@ -38,14 +38,6 @@ export default function App() {
   );
 }
 
-function How() {
-  return (
-    <div>
-      <h2>How to page</h2>
-    </div>
-  );
-}
-
 function About() {
   return (
     <div>
