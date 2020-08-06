@@ -14,10 +14,10 @@
 .mobile-container {
   /* background-color: #8d5a8a; */
   color: #1a2829;
-  display: inline-flex;
+  display: none;
   justify-self: end;
+  margin: auto;
   margin-right: 10%;
-  /* padding-right: 10%; */
 }
 
 .logo-container {
@@ -32,7 +32,6 @@
 
 .site-announcement-message {
   font-size: 18px;
-  /* width: 100%; */
   font-family: Montserrat, sans-serif;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
@@ -42,7 +41,7 @@
   text-rendering: optimizeLegibility;
   display: block;
   font-weight: 500;
-  padding: 10px 0px;
+  padding: 10px 30px;
   color: #ffffff;
 }
 
@@ -51,10 +50,10 @@
     display: none;
   }
   .mobile-container {
-    display: inline-flex;
+    display: block;
   }
   .site-announcement-message {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 

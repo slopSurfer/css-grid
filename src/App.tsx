@@ -4,6 +4,7 @@ import { GridBox } from "./GridDemo";
 import { ProductDetail } from "./product/ProductDetail";
 import { GrMenu } from "react-icons/gr";
 import { Box } from "@chakra-ui/core";
+import { HowItWorks } from "./howitworks/HowItWorks";
 import "./GridDemo";
 import "./navbar-styles.css";
 import "./styles.css";
@@ -27,7 +28,7 @@ export default function App() {
         <Navbar />
         <Switch>
           <Route path="/" exact component={GridBox} />
-          <Route path="/how" exact component={How} />
+          <Route path="/how" exact component={HowItWorks} />
           <Route path="/about" exact component={About} />
           <Route path="/faq" exact component={Faq} />
           <Route path="/productdetail" exact component={ProductDetail} />
@@ -92,7 +93,7 @@ function Navbar() {
               cart
             </Link>
           </div>
-          <Box className="mobile-container" as={GrMenu} w="33px" h="100%" />
+          <Box className="mobile-container" as={GrMenu} w="33px" h="33px" />
         </div>
       </div>
     </div>
