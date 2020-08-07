@@ -16,29 +16,23 @@ export const HowItWorks = () => {
   return (
     <div style={{ backgroundColor: "rgb(252,252,252)", height: "100vh" }}>
       <GridSteps>
-        <Card1
-          title="Step 1"
-          text="Select your photo"
-          description={step1Desc}
-          color="red.100"
-        />
         <Card
           title="Step 1"
           text="Select your photo"
           description={step1Desc}
-          color="bg-red-200"
+          color="red.200"
         />
         <Card
           title="Step 2"
           text="Customize your design"
           description={step2Desc}
-          color="bg-yellow-200"
+          color="yellow.200"
         />
         <Card
           title="Step 3"
           text="Get excited"
           description={step3Desc}
-          color="bg-green-200"
+          color="green.200"
         />
       </GridSteps>
     </div>
@@ -69,55 +63,36 @@ const GridSteps = styled.div`
   }
 `;
 
-// const TitleStep = styled.div`
-//   font-weight: 300;
-//   font-size: 4rem;
-//   color: black;
-//   font-family: "Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif";
-// `;
-/* const TitleText = (props: { text: string }) => {
-  return (
-    <Text
-      color="gray.800"
-      fontWeight={300}
-      fontSize="4xl"
-      fontFamily="Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif"
-    >
-      {props.text}
-    </Text>
-  );
-}; */
+// const Card = (props: {
+//   title: string;
+//   text: string;
+//   description: string;
+//   color: string;
+// }) => {
+//   return (
+//     <>
+//       <div
+//         className={`rounded-4 rounded ${
+//           props.color
+//         } sm: px-10 md:px-20 lg:px-32 `}
+//       >
+//         <div className="">
+//           <p className="font-bold text-6xl text-gray-800 mt-12">
+//             {props.title}
+//           </p>
+//           <p className="font-semibold sm:text-4xl md:text-5xl text-gray-800 mt-0">
+//             {props.text}
+//           </p>
+//           <p className="sm:text-3xl md:text-4xl text-gray-700 mt-4 mb-12">
+//             {props.description}
+//           </p>
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
 
 const Card = (props: {
-  title: string;
-  text: string;
-  description: string;
-  color: string;
-}) => {
-  return (
-    <>
-      <div
-        className={`rounded-4 rounded ${
-          props.color
-        } sm: px-10 md:px-20 lg:px-32 `}
-      >
-        <div className="">
-          <p className="font-bold text-6xl text-gray-800 mt-12">
-            {props.title}
-          </p>
-          <p className="font-semibold sm:text-4xl md:text-5xl text-gray-800 mt-0">
-            {props.text}
-          </p>
-          <p className="sm:text-3xl md:text-4xl text-gray-700 mt-4 mb-12">
-            {props.description}
-          </p>
-        </div>
-      </div>
-    </>
-  );
-};
-
-const Card1 = (props: {
   title: string;
   text: string;
   description: string;
