@@ -2,7 +2,7 @@
 import * as React from "react";
 import styled from "styled-components";
 // import { color, space, layout } from "styled-system";
-// import { Text } from "@chakra-ui/core";
+import { Box, Text } from "@chakra-ui/core";
 
 export const HowItWorks = () => {
   const step1Desc = `Pick the cutest photo of your dog or cat for a pet portrait and submit 
@@ -16,6 +16,12 @@ export const HowItWorks = () => {
   return (
     <div style={{ backgroundColor: "rgb(252,252,252)", height: "100vh" }}>
       <GridSteps>
+        <Card1
+          title="Step 1"
+          text="Select your photo"
+          description={step1Desc}
+          color="red.100"
+        />
         <Card
           title="Step 1"
           text="Select your photo"
@@ -107,6 +113,44 @@ const Card = (props: {
           </p>
         </div>
       </div>
+    </>
+  );
+};
+
+const Card1 = (props: {
+  title: string;
+  text: string;
+  description: string;
+  color: string;
+}) => {
+  return (
+    <>
+      <Box
+        rounded="lg"
+        bg={`${props.color}`}
+        px={["2rem", "2rem", "4rem", "6rem"]}
+      >
+        <Text
+          fontSize={["4xl", "6xl"]}
+          fontWeight="bold"
+          letterSpacing="wider"
+          mt="30px"
+          color="gray.800"
+        >
+          {props.title}
+        </Text>
+        <Text
+          fontSize={["2xl", "5xl"]}
+          fontWeight="semibold"
+          letterSpacing="wide"
+          color="gray.800"
+        >
+          {props.text}
+        </Text>
+        <Text fontSize={["2xl", "4xl"]} mb="30px" mt="10px" color="gray.700">
+          {props.description}
+        </Text>
+      </Box>
     </>
   );
 };

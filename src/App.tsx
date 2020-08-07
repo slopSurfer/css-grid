@@ -12,16 +12,6 @@ import "./styles.css";
 // const color = "brown";
 
 export default function App() {
-  /*   const Demo = styled.div`
-    padding: 32px;
-    background-color: hotpink;
-    font-size: 24px;
-    color: ${props => (props.primary ? "white" : "palevioletred")};
-    border-radius: 4px;
-    &:hover {
-      color: ${color};
-    }
-  `; */
   return (
     <main>
       <div>
