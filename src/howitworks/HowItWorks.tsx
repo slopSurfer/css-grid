@@ -52,20 +52,20 @@ const GridSteps = styled.div`
   align-items: center;
   grid-gap: 4rem;
   row-gap: 2rem;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
   padding-top: 2%;
   margin-bottom: 2rem;
   /* background-color: lightgray; */
-  @media (max-width: 865px) {
-    margin-left: 7.5%;
-    margin-right: 7.5%;
+  @media (max-width: 992px) {
+    margin-left: 5%;
+    margin-right: 5%;
     padding-top: 3%;
   }
-  @media only screen and (min-width: 1440px) {
+  @media only screen and (min-width: 992px) {
     grid-template-columns: 1fr;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 `;
 
@@ -75,7 +75,7 @@ const PhotoTips = () => (
     bg="gray.100"
     py="25px"
     px={["2rem", "2rem", "4rem", "6rem"]}
-    mx={["7.5%", "7.5%", "7.5%", "10%", "20%", "20%"]}
+    mx={["5%", "5%", "5%", "10%"]}
     borderWidth="1px"
   >
     <Text fontSize={["4xl", "6xl"]} fontWeight="bold" mb="15px">
