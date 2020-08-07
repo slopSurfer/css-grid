@@ -52,8 +52,8 @@ const GridSteps = styled.div`
   align-items: center;
   grid-gap: 4rem;
   row-gap: 2rem;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 10%;
+  margin-right: 10%;
   padding-top: 2%;
   margin-bottom: 2rem;
   /* background-color: lightgray; */
@@ -75,7 +75,7 @@ const PhotoTips = () => (
     bg="gray.100"
     py="25px"
     px={["2rem", "2rem", "4rem", "6rem"]}
-    mx={["7.5%", "7.5%", "7.5%", "15%", "20%", "20%"]}
+    mx={["7.5%", "7.5%", "7.5%", "10%", "20%", "20%"]}
     borderWidth="1px"
   >
     <Text fontSize={["4xl", "6xl"]} fontWeight="bold" mb="15px">
@@ -138,7 +138,7 @@ const Card = (props: {
         >
           {props.text}
         </Text>
-        <Text fontSize={["2xl", "4xl"]} mb="30px" mt="10px" color="gray.700">
+        <Text fontSize={["2xl", "3xl"]} mb="30px" mt="10px" color="gray.700">
           {props.description}
         </Text>
       </Box>
