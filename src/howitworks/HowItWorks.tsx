@@ -2,7 +2,7 @@
 import * as React from "react";
 import styled from "styled-components";
 // import { color, space, layout } from "styled-system";
-import { Box, Text } from "@chakra-ui/core";
+import { Box, Text, List, ListItem, ListIcon } from "@chakra-ui/core";
 
 export const HowItWorks = () => {
   const step1Desc = `Pick the cutest photo of your dog or cat for a pet portrait and submit 
@@ -14,7 +14,13 @@ export const HowItWorks = () => {
   const step3Desc = `Sit tight while our talented and passionate team of digital artists 
   illustrate your artwork. Most orders ship within 1-2 weeks and sometimes even sooner.`;
   return (
-    <div style={{ backgroundColor: "rgb(252,252,252)", height: "100vh" }}>
+    <div
+      style={{
+        backgroundColor: "rgb(252,252,252)",
+        height: "100vh",
+        marginBottom: "50px",
+      }}
+    >
       <GridSteps>
         <Card
           title="Step 1"
@@ -35,6 +41,7 @@ export const HowItWorks = () => {
           color="green.200"
         />
       </GridSteps>
+      <PhotoTips />
     </div>
   );
 };
@@ -44,11 +51,11 @@ const GridSteps = styled.div`
   grid-template-columns: 1fr;
   align-items: center;
   grid-gap: 4rem;
-  row-gap: 4rem;
+  row-gap: 2rem;
   margin-left: 15%;
   margin-right: 15%;
-  padding-top: 4%;
-  margin-bottom: 5%;
+  padding-top: 2%;
+  margin-bottom: 2rem;
   /* background-color: lightgray; */
   @media (max-width: 865px) {
     margin-left: 7.5%;
@@ -56,41 +63,50 @@ const GridSteps = styled.div`
     padding-top: 3%;
   }
   @media only screen and (min-width: 1440px) {
-    /* padding-top: 5%; */
     grid-template-columns: 1fr;
     margin-left: 20%;
     margin-right: 20%;
   }
 `;
 
-// const Card = (props: {
-//   title: string;
-//   text: string;
-//   description: string;
-//   color: string;
-// }) => {
-//   return (
-//     <>
-//       <div
-//         className={`rounded-4 rounded ${
-//           props.color
-//         } sm: px-10 md:px-20 lg:px-32 `}
-//       >
-//         <div className="">
-//           <p className="font-bold text-6xl text-gray-800 mt-12">
-//             {props.title}
-//           </p>
-//           <p className="font-semibold sm:text-4xl md:text-5xl text-gray-800 mt-0">
-//             {props.text}
-//           </p>
-//           <p className="sm:text-3xl md:text-4xl text-gray-700 mt-4 mb-12">
-//             {props.description}
-//           </p>
-//         </div>
-//       </div>
-//     </>
-//   );
-// };
+const PhotoTips = () => (
+  <Box
+    rounded="lg"
+    bg="gray.100"
+    py="25px"
+    px={["2rem", "2rem", "4rem", "6rem"]}
+    mx={["7.5%", "7.5%", "7.5%", "15%", "20%", "20%"]}
+    borderWidth="1px"
+  >
+    <Text fontSize={["4xl", "6xl"]} fontWeight="bold" mb="15px">
+      Tips to get a great image
+    </Text>
+    <Box>
+      <List spacing={6} fontSize="2xl" mb="20px">
+        <ListItem>
+          <ListIcon icon="check" color="green.500" />
+          Get a close up of your furry loved one, this way we can better see all
+          of their beautiful the details.
+        </ListItem>
+        <ListItem>
+          <ListIcon icon="check" color="green.500" />
+          Get on their level! Crouch down when taking the photo and try to get
+          eye level for the best results.
+        </ListItem>
+        <ListItem>
+          <ListIcon icon="check" color="green.500" />
+          The best poses are when your pet is either sitting or standing, not
+          laying down.
+        </ListItem>
+        <ListItem>
+          <ListIcon icon="check" color="green.500" />
+          Light is so important when it comes to a good photo. Outdoor daylight
+          is always the best option!
+        </ListItem>
+      </List>
+    </Box>
+  </Box>
+);
 
 const Card = (props: {
   title: string;
