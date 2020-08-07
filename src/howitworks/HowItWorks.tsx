@@ -82,7 +82,7 @@ const PhotoTips = () => (
       Tips to get a great image
     </Text>
     <Box>
-      <List spacing={6} fontSize="2xl" mb="20px">
+      <List spacing={6} fontSize={["15px", "16px", "16px", "18px"]} mb="20px">
         <ListItem>
           <ListIcon icon="check" color="green.500" />
           Get a close up of your furry loved one, this way we can better see all
@@ -138,7 +138,12 @@ const Card = (props: {
         >
           {props.text}
         </Text>
-        <Text fontSize={["2xl", "3xl"]} mb="30px" mt="10px" color="gray.700">
+        <Text
+          fontSize={["15px", "16px", "16px", "18px"]}
+          mb="30px"
+          mt="10px"
+          color="gray.700"
+        >
           {props.description}
         </Text>
       </Box>
