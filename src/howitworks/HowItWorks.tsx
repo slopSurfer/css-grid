@@ -40,8 +40,8 @@ export const HowItWorks = () => {
           description={step3Desc}
           color="green.200"
         />
+        <PhotoTips />
       </GridSteps>
-      <PhotoTips />
     </div>
   );
 };
@@ -49,23 +49,26 @@ export const HowItWorks = () => {
 const GridSteps = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  align-items: center;
-  grid-gap: 4rem;
   row-gap: 2rem;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
   padding-top: 2%;
   margin-bottom: 2rem;
   /* background-color: lightgray; */
-  @media (max-width: 992px) {
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
     margin-left: 5%;
     margin-right: 5%;
-    padding-top: 3%;
   }
-  @media only screen and (min-width: 992px) {
+  @media (min-width: 1024px) {
     grid-template-columns: 1fr;
     margin-left: 10%;
     margin-right: 10%;
+  }
+  @media (min-width: 1440px) {
+    grid-template-columns: 1fr;
+    margin-left: 15%;
+    margin-right: 15%;
   }
 `;
 
@@ -75,7 +78,6 @@ const PhotoTips = () => (
     bg="gray.100"
     py="25px"
     px={["2rem", "2rem", "4rem", "6rem"]}
-    mx={["5%", "5%", "5%", "10%"]}
     borderWidth="1px"
   >
     <Text fontSize={["4xl", "6xl"]} fontWeight="bold" mb="15px">
@@ -120,6 +122,7 @@ const Card = (props: {
         rounded="lg"
         bg={`${props.color}`}
         px={["2rem", "2rem", "4rem", "6rem"]}
+        color="white"
       >
         <Text
           fontSize={["4xl", "6xl"]}
@@ -127,6 +130,7 @@ const Card = (props: {
           letterSpacing="wider"
           mt="30px"
           color="gray.800"
+          // color="white.300"
         >
           {props.title}
         </Text>
