@@ -195,14 +195,14 @@ const MainGrid = styled.div`
   padding-top: 0.75rem;
   margin-bottom: 5%;
   /* background-color: blue; */
-  @media (max-width: 834px) {
+  @media (min-width: 1440px) {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
     margin-left: 7.5%;
     margin-right: 7.5%;
-  }
-  @media only screen and (min-width: 1440px) {
-    margin-left: 20%;
-    margin-right: 20%;
   }
 `;
 
@@ -269,7 +269,7 @@ const ProductImage = styled.img`
   /* max-height: 80vh; */
   border-radius: 6px;
   box-sizing: border-box;
-  @media (max-width: 834px) {
+  @media (max-width: 768px) {
     /* max-height: 60vh; */
     margin: auto;
   }

@@ -18,7 +18,7 @@ export const HowItWorks = () => {
       style={{
         backgroundColor: "rgb(252,252,252)",
         height: "100vh",
-        marginBottom: "50px",
+        marginBottom: "80px",
       }}
     >
       <GridSteps>
@@ -50,25 +50,20 @@ const GridSteps = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 2rem;
-  margin-left: 2%;
-  margin-right: 2%;
+  margin-left: 15%;
+  margin-right: 15%;
   padding-top: 2%;
-  margin-bottom: 2rem;
-  /* background-color: lightgray; */
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-  @media (min-width: 1024px) {
+  @media (max-width: 1024px) {
+    background-color: red;
     grid-template-columns: 1fr;
     margin-left: 10%;
     margin-right: 10%;
   }
-  @media (min-width: 1440px) {
+  @media (max-width: 768px) {
+    background-color: green;
     grid-template-columns: 1fr;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 `;
 
